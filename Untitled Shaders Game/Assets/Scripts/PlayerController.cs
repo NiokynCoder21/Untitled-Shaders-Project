@@ -17,17 +17,27 @@ public class PlayerController : MonoBehaviour
     private float lookRotation; //keep track of current look rotation
     public float maxForce; //the max force that can be applied on the player
 
+    public GameObject TerrainScannerPrefab;
+    public float duration;
+    public float size;
+    public float spawnDistance;
+    public Transform player;
+
     public void OnMove(InputAction.CallbackContext context)  
     {
        move = context.ReadValue<Vector2>(); //this detects input along the vector and allows movement 
     }
-
 
     public void OnLook(InputAction.CallbackContext context) //Uses the new input system to call function when button pressed
     {
         look = context.ReadValue<Vector2>(); //this detects input along the vector and allows look which controls where the player sees 
     }
 
+    public void onScan(InputAction.CallbackContext context)
+    {
+        ScanTerrain();
+        print("scanned");
+    }
     //Potato Code. (2022, May 15). How to Make a Rigidbody Player Controller with Unity's Input System[Video]. Youtube. https://www.youtube.com/watch?v=1LtePgzeqjQ
 
     private void FixedUpdate()
@@ -73,6 +83,28 @@ public class PlayerController : MonoBehaviour
         camHolder.transform.eulerAngles = new Vector3(lookRotation, camHolder.transform.eulerAngles.y, camHolder.transform.eulerAngles.z); //this sets the rotatation of camera holder
                                                                                                                                            //so that it stays unchanged on the y and z and
                                                                                                                                            //only rotates on the x
+    }
+
+    void ScanTerrain()
+    {
+        Vector3 spawnPosition = player.position + player.forward * spawnDistance;
+
+        GameObject terrainScanner = Instantiate(TerrainScannerPrefab, spawnPosition, Quaternion.identity) as GameObject;
+        ParticleSystem terrainScannerPS = terrainScanner.transform.GetChild(0).GetComponent<ParticleSystem>();
+
+        if(terrainScannerPS != null)
+        {
+            var main = terrainScannerPS.main;
+            main.startLifetime = duration;
+            main.startSize = size;
+        }
+
+        else
+        {
+            print("No particle system");
+        }
+
+        Destroy(terrainScanner, duration + 1);
     }
 
     private void LateUpdate()

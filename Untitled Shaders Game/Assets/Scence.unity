@@ -2557,7 +2557,19 @@ MonoBehaviour:
     m_ActionId: 1a444d67-b720-4934-8600-d33239711ebe
     m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1168907668}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: onScan
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 64a33551-f9cc-4b93-b7c6-9dd97db3cddd
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -2623,6 +2635,12 @@ MonoBehaviour:
   speed: 5
   sensitivity: 0.1
   maxForce: 1
+  TerrainScannerPrefab: {fileID: 6730477664919419107, guid: 466824b418e21d0489508a98a799fd85,
+    type: 3}
+  duration: 15
+  size: 50
+  spawnDistance: 2
+  player: {fileID: 1168907665}
 --- !u!1 &1253292648
 GameObject:
   m_ObjectHideFlags: 0
@@ -6241,17 +6259,17 @@ PrefabInstance:
     - target: {fileID: 8667403297314738287, guid: 466824b418e21d0489508a98a799fd85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8667403297314738287, guid: 466824b418e21d0489508a98a799fd85,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.36
       objectReference: {fileID: 0}
     - target: {fileID: 8667403297314738287, guid: 466824b418e21d0489508a98a799fd85,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.92
       objectReference: {fileID: 0}
     - target: {fileID: 8667403297314738287, guid: 466824b418e21d0489508a98a799fd85,
         type: 3}
