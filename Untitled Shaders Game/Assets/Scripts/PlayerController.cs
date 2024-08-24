@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
     public GameObject TerrainScannerPrefab;
     public float duration;
     public float size;
-    public float spawnDistance;
-    public Transform player;
 
     public void OnMove(InputAction.CallbackContext context)  
     {
@@ -87,9 +85,7 @@ public class PlayerController : MonoBehaviour
 
     void ScanTerrain()
     {
-        Vector3 spawnPosition = player.position + player.forward * spawnDistance;
-
-        GameObject terrainScanner = Instantiate(TerrainScannerPrefab, spawnPosition, Quaternion.identity) as GameObject;
+        GameObject terrainScanner = Instantiate(TerrainScannerPrefab, gameObject.transform.position, Quaternion.identity) as GameObject;
         ParticleSystem terrainScannerPS = terrainScanner.transform.GetChild(0).GetComponent<ParticleSystem>();
 
         if(terrainScannerPS != null)
