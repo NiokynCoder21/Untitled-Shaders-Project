@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour
 
         fire.gameObject.SetActive(false);
         torchStick.gameObject.SetActive(false);
+        TorchManager.Instance.SetHasTorch(false);
     }
 
     private void LateUpdate()
