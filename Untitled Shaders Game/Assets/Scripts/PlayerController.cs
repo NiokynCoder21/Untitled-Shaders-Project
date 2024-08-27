@@ -116,11 +116,6 @@ public class PlayerController : MonoBehaviour
         {
             fire.gameObject.SetActive(true);
         }
-
-        else
-        {
-            fire.gameObject.SetActive(false);
-        }
     }
     private void LateUpdate()
     {
