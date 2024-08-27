@@ -1468,7 +1468,9 @@ MonoBehaviour:
   duration: 15
   size: 50
   fire: {fileID: 1581876271}
+  torchStick: {fileID: 1565770661}
   torch: 0
+  fireTime: 5
 --- !u!1 &1189512276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2027,7 @@ Transform:
   m_LocalScale: {x: 0.30947515, y: 0.2365644, z: 0.74695766}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1564313185}
   - {fileID: 1565770665}
   - {fileID: 1581876274}
   m_Father: {fileID: 1168907665}
@@ -2114,7 +2117,7 @@ GameObject:
   - component: {fileID: 1564313186}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: HandTorch
+  m_TagString: NoTorch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2128,11 +2131,11 @@ Transform:
   m_GameObject: {fileID: 1564313184}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16617778, y: 0.023899708, z: 0.067698225}
-  m_LocalScale: {x: 2.8578708, y: 2.5470734, z: 1.3584805}
+  m_LocalPosition: {x: 0.0017378221, y: 0.27512583, z: 0.48289105}
+  m_LocalScale: {x: 1.5621893, y: 4.1104317, z: 0.26325896}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1565770665}
+  m_Father: {fileID: 1554023134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1564313186
 BoxCollider:
@@ -2219,7 +2222,7 @@ GameObject:
   - component: {fileID: 1565770662}
   m_Layer: 0
   m_Name: Torch Stick
-  m_TagString: Untagged
+  m_TagString: HandTorch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2309,8 +2312,7 @@ Transform:
   m_LocalPosition: {x: 0.09257509, y: 0.23655681, z: 0.46977186}
   m_LocalScale: {x: 0.54662704, y: 1.6137861, z: 0.19378929}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1564313185}
+  m_Children: []
   m_Father: {fileID: 1554023134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566944978

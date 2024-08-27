@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,8 +22,9 @@ public class PlayerController : MonoBehaviour
     public float duration;
     public float size;
     public GameObject fire;
+    public GameObject torchStick;
 
-    public bool torch = false;
+    public bool torch = false; //checks whether the flame is on or off;
     public float fireTime = 10f;
 
     public void OnMove(InputAction.CallbackContext context)  
@@ -52,11 +54,6 @@ public class PlayerController : MonoBehaviour
         {
           Move();  //call the move function
         }        
-    }
-
-    private void Update()
-    {
-       
     }
 
     private void Start()
@@ -121,14 +118,12 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator LightTorchWithTimer(float duration)
     {
-        // Activate the fire
         fire.gameObject.SetActive(true);
 
-        // Wait for the duration (countdown)
         yield return new WaitForSeconds(duration);
 
-        // Deactivate the fire
         fire.gameObject.SetActive(false);
+        torchStick.gameObject.SetActive(false);
     }
 
     private void LateUpdate()
