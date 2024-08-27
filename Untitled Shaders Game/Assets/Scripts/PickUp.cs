@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject torch;
+    public GameObject oldTorch;
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("NoTorch")) //if the object does have wall tag, this to ensure it is not wall running
+        {
+            torch.gameObject.SetActive(true);
+            Destroy(oldTorch);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
