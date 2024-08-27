@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public GameObject fire;
 
     public bool torch = false;
+    public float fireTime = 10f;
 
     public void OnMove(InputAction.CallbackContext context)  
     {
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     public void onLight(InputAction.CallbackContext context)
     {
-        LightTorch();
+        LightTorch(fireTime);
     }
     //Potato Code. (2022, May 15). How to Make a Rigidbody Player Controller with Unity's Input System[Video]. Youtube. https://www.youtube.com/watch?v=1LtePgzeqjQ
 
@@ -110,13 +111,26 @@ public class PlayerController : MonoBehaviour
         Destroy(terrainScanner, duration + 1);
     }
 
-    void LightTorch()
+    void LightTorch(float duration)
     {
         if(torch == true)
         {
-            fire.gameObject.SetActive(true);
+            StartCoroutine(LightTorchWithTimer(duration));
         }
     }
+
+    IEnumerator LightTorchWithTimer(float duration)
+    {
+        // Activate the fire
+        fire.gameObject.SetActive(true);
+
+        // Wait for the duration (countdown)
+        yield return new WaitForSeconds(duration);
+
+        // Deactivate the fire
+        fire.gameObject.SetActive(false);
+    }
+
     private void LateUpdate()
     {
         NormalLook(); //call the normal look function

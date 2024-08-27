@@ -2218,7 +2218,7 @@ GameObject:
   - component: {fileID: 1565770663}
   - component: {fileID: 1565770662}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Torch Stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2542,7 +2542,7 @@ GameObject:
   - component: {fileID: 1581876273}
   - component: {fileID: 1581876272}
   m_Layer: 0
-  m_Name: Torch
+  m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
