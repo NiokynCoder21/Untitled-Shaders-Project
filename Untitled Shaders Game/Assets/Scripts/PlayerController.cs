@@ -15,18 +15,20 @@ public class PlayerController : MonoBehaviour
     public float speed; //player movement speed
 
     public float sensitivity; //player mouse sensitity speed
+    public float controllerSensitivty; //player controller sensitivty for camera movement 
+    public float currentSensitivity; //the players current sensitivity 
     private float lookRotation; //keep track of current look rotation
     public float maxForce; //the max force that can be applied on the player
 
-    public GameObject TerrainScannerPrefab;
-    public float duration;
-    public float size;
-    public GameObject fire;
-    public GameObject torchStick;
+    public GameObject TerrainScannerPrefab; 
+    public float duration; //how long until the flame dies
+    public float size; //
+    public GameObject fire; //the fire game object
+    public GameObject torchStick; //the torch game object 
 
     public bool torch = false; //checks whether the flame is on or off;
-    public float fireTime = 10f;
-    public TMP_Text scanText;
+    public float fireTime = 10f; //how long the fire is lit for
+    public TMP_Text scanText; //this is text that tells the player what to press to scan the enviroment
 
     public void OnMove(InputAction.CallbackContext context)  
     {
@@ -36,16 +38,27 @@ public class PlayerController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context) //Uses the new input system to call function when button pressed
     {
         look = context.ReadValue<Vector2>(); //this detects input along the vector and allows look which controls where the player sees 
+
+        InputDevice device = context.control.device; //this checks what device provided the input
+
+        if (device is Mouse)
+        {
+            currentSensitivity = sensitivity; //if mouse set the sensitivity to mouse
+        }
+        else if (device is Gamepad)
+        {
+            currentSensitivity = controllerSensitivty; //if controller set the sensitivity to controller
+        }
     }
 
     public void onScan(InputAction.CallbackContext context)
     {
-        ScanTerrain();
+        ScanTerrain(); //this calls the function when the button is pressed
     }
 
     public void onLight(InputAction.CallbackContext context)
     {
-        LightTorch(fireTime);
+        LightTorch(fireTime); //this calls the light torch function and passes the time variable 
     }
     //Potato Code. (2022, May 15). How to Make a Rigidbody Player Controller with Unity's Input System[Video]. Youtube. https://www.youtube.com/watch?v=1LtePgzeqjQ
 
@@ -57,6 +70,7 @@ public class PlayerController : MonoBehaviour
         }        
     }
 
+   
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; //locks the cursor when the game begins
@@ -80,9 +94,9 @@ public class PlayerController : MonoBehaviour
 
     void NormalLook()
     {
-        transform.Rotate(Vector3.up * look.x * sensitivity); //turns the camera around at the sensitivity set 
+        transform.Rotate(Vector3.up * look.x * currentSensitivity); //turns the camera around at the sensitivity set 
 
-        lookRotation += (-look.y * sensitivity); //ensure that the the player up and down look is at the sensitivity set
+        lookRotation += (-look.y * currentSensitivity); //ensure that the the player up and down look is at the sensitivity set
         lookRotation = Mathf.Clamp(lookRotation, -90, 90); //clamps the rotation to -90 and 90 so it restricted between these two values
         camHolder.transform.eulerAngles = new Vector3(lookRotation, camHolder.transform.eulerAngles.y, camHolder.transform.eulerAngles.z); //this sets the rotatation of camera holder
                                                                                                                                            //so that it stays unchanged on the y and z and
@@ -112,21 +126,21 @@ public class PlayerController : MonoBehaviour
 
     void LightTorch(float duration)
     {
-        if(torch == true)
+        if(torch == true) //if the flame is on
         {
-            StartCoroutine(LightTorchWithTimer(duration));
+            StartCoroutine(LightTorchWithTimer(duration)); //this will start the timer
         }
     }
 
-    IEnumerator LightTorchWithTimer(float duration)
+    IEnumerator LightTorchWithTimer(float duration) //to control how long the fire is on for
     {
-        fire.gameObject.SetActive(true);
+        fire.gameObject.SetActive(true); //this turns on the fire game object
 
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(duration); //wait for this amount of time
 
-        fire.gameObject.SetActive(false);
-        torchStick.gameObject.SetActive(false);
-        TorchManager.Instance.SetHasTorch(false);
+        fire.gameObject.SetActive(false); //this turns off the fire game object
+        torchStick.gameObject.SetActive(false); //this turns off the torch game object
+        TorchManager.Instance.SetHasTorch(false); //this tells the torch manager that the player does not have a torch anymore
     }
 
     private void LateUpdate()
@@ -139,7 +153,7 @@ public class PlayerController : MonoBehaviour
         grounded = state;
     }
 
-    public void SetTorch(bool state) //this is used to allow me to check for grounded in a collsion script
+    public void SetTorch(bool state) //this is used to allow me to check if the flame is on or off
     {
         torch = state;
     }

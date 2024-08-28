@@ -6,69 +6,66 @@ using UnityEngine.UI;
 
 public class TorchCheck : MonoBehaviour //this is on the sphere and checks what hits it
 {
-    public TMP_Text hasTorchText;
-    public TMP_Text notTorchText;
+    public TMP_Text hasTorchText; //this is the text that tells the player how to light their torch
+    public TMP_Text notTorchText; //this is the tect that tells the player they have no torch
 
-    public PlayerController controller;
+    public PlayerController controller; //this a reference to the player controller script
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("HandTorch"))
+        if (other.gameObject.CompareTag("HandTorch")) ////if collide with game object check if it has tag hand torch
         {
-            if (TorchManager.Instance.HasTorch())
+            if (TorchManager.Instance.HasTorch()) //this checks if the player is holding a torch by looking in the torch manager script
             {
-                hasTorchText.gameObject.SetActive(true);
-                notTorchText.gameObject.SetActive(false);
-                controller.SetTorch(true);
+                hasTorchText.gameObject.SetActive(true); //this enables the game object
+                notTorchText.gameObject.SetActive(false); //this disables the game object
+                controller.SetTorch(true); //this tells the torch manager script that the player is holding a torch
             }
         }
 
-        else if(!TorchManager.Instance.HasTorch())
+        else if(!TorchManager.Instance.HasTorch()) //this checks if the player is not holding a torch by looking in the torch manager script
         {
-            hasTorchText.gameObject.SetActive(false);
-            notTorchText.gameObject.SetActive(true);
-            print("begone torch2");
-            controller.SetTorch(false);
+            hasTorchText.gameObject.SetActive(false); //this disables the game object
+            notTorchText.gameObject.SetActive(true); //this enables the game object
+            controller.SetTorch(false); //this tells the torch manager script that the player is not holding a torch
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("HandTorch"))
+        if (other.gameObject.CompareTag("HandTorch")) //if collide with game object check if it has tag hand torch
         {
-            if (TorchManager.Instance.HasTorch())
+            if (TorchManager.Instance.HasTorch()) //this checks if the player is holding a torch by looking in the torch manager script
             {
-                hasTorchText.gameObject.SetActive(true);
-                notTorchText.gameObject.SetActive(false); // Hide the other text
-                controller.SetTorch(true);
+                hasTorchText.gameObject.SetActive(true); //this enables the game object
+                notTorchText.gameObject.SetActive(false); //this disables the game object
+                controller.SetTorch(true); //this tells the torch manager script that the player is holding a torch
             }
         }
-        else if(!TorchManager.Instance.HasTorch())
+        else if(!TorchManager.Instance.HasTorch()) //this checks if the player is not holding a torch by looking in the torch manager script
         {
-            hasTorchText.gameObject.SetActive(false);
-            notTorchText.gameObject.SetActive(true);
-            controller.SetTorch(false);
+            hasTorchText.gameObject.SetActive(false); //this disables the game object
+            notTorchText.gameObject.SetActive(true); //this enables the game object
+            controller.SetTorch(false); //this tells the torch manager script that the player is not holding a torch
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("HandTorch"))
+        if (other.gameObject.CompareTag("HandTorch")) //if collide with game object check if it has tag hand torch
         {
-            if (TorchManager.Instance.HasTorch())
+            if (TorchManager.Instance.HasTorch()) //this checks if the player is holding a torch by looking in the torch manager script
             {
-                hasTorchText.gameObject.SetActive(false);
+                hasTorchText.gameObject.SetActive(false); //this disables the game object
                 notTorchText.gameObject.SetActive(false); // Make sure both texts are hidden
-                print("end it now");
-                controller.SetTorch(false);
+                controller.SetTorch(false); //this tells the torch manager script that the player is not holding a torch
             }
         }
 
-        else if(!TorchManager.Instance.HasTorch())
+        else if(!TorchManager.Instance.HasTorch()) //this checks if the player is not holding a torch by looking in the torch manager script
         {
-            hasTorchText.gameObject.SetActive(false);
-            notTorchText.gameObject.SetActive(false); // Hide both texts
-            print("end it now2");
+            hasTorchText.gameObject.SetActive(false); //this disables the game object
+            notTorchText.gameObject.SetActive(false); //this disables the game object
         }
     }
 }
