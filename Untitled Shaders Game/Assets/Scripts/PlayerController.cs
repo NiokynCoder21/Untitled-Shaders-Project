@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     public bool torch = false; //checks whether the flame is on or off;
     public float fireTime = 10f;
+    public TMP_Text scanText;
 
     public void OnMove(InputAction.CallbackContext context)  
     {
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour
             var main = terrainScannerPS.main;
             main.startLifetime = duration;
             main.startSize = size;
+            scanText.gameObject.SetActive(false);
         }
 
         else
