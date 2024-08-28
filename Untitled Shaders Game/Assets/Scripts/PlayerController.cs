@@ -105,15 +105,16 @@ public class PlayerController : MonoBehaviour
 
     void ScanTerrain()
     {
-        GameObject terrainScanner = Instantiate(TerrainScannerPrefab, gameObject.transform.position, Quaternion.identity) as GameObject;
-        ParticleSystem terrainScannerPS = terrainScanner.transform.GetChild(0).GetComponent<ParticleSystem>();
+        GameObject terrainScanner = Instantiate(TerrainScannerPrefab, gameObject.transform.position, Quaternion.identity) as GameObject; //this creates a prefab at the position of the current
+                                                                                                                                         // object with no rotation
+        ParticleSystem terrainScannerPS = terrainScanner.transform.GetChild(0).GetComponent<ParticleSystem>(); //This accesses the child of created prefab and gets the particle system
 
-        if(terrainScannerPS != null)
+        if(terrainScannerPS != null) //checks if prefab has the paritcle system attacthed
         {
-            var main = terrainScannerPS.main;
-            main.startLifetime = duration;
-            main.startSize = size;
-            scanText.gameObject.SetActive(false);
+            var main = terrainScannerPS.main; //this accesses the main module of the particle system
+            main.startLifetime = duration; //this sets the lifetime to the duration
+            main.startSize = size; //this sets the start size of the particles
+            scanText.gameObject.SetActive(false); //this removes text once the player presses the button
         }
 
         else
@@ -121,7 +122,9 @@ public class PlayerController : MonoBehaviour
             print("No particle system");
         }
 
-        Destroy(terrainScanner, duration + 1);
+        Destroy(terrainScanner, duration + 1); //This destroys the object after 1 second
+
+        //Gabriel Aguiar Prod. (2023, July 11). Unity Shader Graph - Terrain Scanner Effect Tutorial[Video]. Youtube. https://www.youtube.com/watch?v=9DshpqhKDz0&t=621s
     }
 
     void LightTorch(float duration)
