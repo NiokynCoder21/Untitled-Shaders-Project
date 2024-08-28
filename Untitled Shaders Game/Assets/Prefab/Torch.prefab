@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3004843296226288321}
   m_Layer: 0
   m_Name: Torch
-  m_TagString: Untagged
+  m_TagString: HandTorch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,3 +122,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torch: {fileID: 7404618276757670659, guid: 1f6f83adba489974aa2c9edaa78e299b, type: 3}
   oldTorch: {fileID: 3111101943798725640}
+  haveTorchText: {fileID: 4585679512345265747, guid: 7bb581086d5c77f4db57a9a673444cb7,
+    type: 3}

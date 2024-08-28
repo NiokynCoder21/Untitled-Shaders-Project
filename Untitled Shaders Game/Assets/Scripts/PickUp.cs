@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PickUp : MonoBehaviour
 {
@@ -21,9 +22,13 @@ public class PickUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("HandTorch"))
         {
-            torch.gameObject.SetActive(true);
-            Destroy(oldTorch);
-            TorchManager.Instance.SetHasTorch(true);
+            if (!TorchManager.Instance.HasTorch())
+            {
+                torch.gameObject.SetActive(true);
+                Destroy(oldTorch);
+                TorchManager.Instance.SetHasTorch(true);
+            }
+
         }
     }
 

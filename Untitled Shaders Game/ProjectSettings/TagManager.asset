@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - HandTorch
   - NoTorch
+  - Torch
   layers:
   - Default
   - TransparentFX
