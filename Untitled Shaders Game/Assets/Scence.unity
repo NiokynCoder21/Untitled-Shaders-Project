@@ -2882,6 +2882,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 910310405}
+  playerNameText: {fileID: 333247837}
+  npcNameText: {fileID: 2065102836}
+  textStuff: {fileID: 509304802}
 --- !u!1 &509984380
 GameObject:
   m_ObjectHideFlags: 0
