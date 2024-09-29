@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mover
   m_EditorClassIdentifier: 
   dialogueLines:
-  - lineText: Thabo
-    speakerName: Hey I could use some help
-  - lineText: Lebo
-    speakerName: Oh sure why not you talk to James
-  - lineText: Thabo
-    speakerName: Yes I did talk to him
+  - lineText: this is means
+    speakerName: T
+  - lineText: means what dude
+    speakerName: KElly
+  - lineText: It is not over
+    speakerName: T

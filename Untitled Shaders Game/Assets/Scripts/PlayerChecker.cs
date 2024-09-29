@@ -7,6 +7,8 @@ public class PlayerChecker : MonoBehaviour
     public GameObject dialougueStuff;
     public DialougeManager manager;
     public MoverDialougue mover;
+    public DialogueScriptable data;
+    public DialogueScriptable newData;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +18,9 @@ public class PlayerChecker : MonoBehaviour
 
             if (manager != null)
             {
+                manager.SetMover(true);
                 mover.SetMover(true);
+                mover.ChangeDialogueData(newData); //mover data
             }
         }
 
@@ -27,6 +31,7 @@ public class PlayerChecker : MonoBehaviour
             if (manager != null)
             {
                 manager.SetStayer(true);
+                manager.ChangeDialogueData(data); //stayer data
             }
         }
     }
@@ -39,6 +44,7 @@ public class PlayerChecker : MonoBehaviour
 
             if (manager != null)
             {
+                manager.SetMover(true);
                 mover.SetMover(true);
             }
         }
@@ -62,6 +68,7 @@ public class PlayerChecker : MonoBehaviour
 
             if (manager != null)
             {
+               manager.SetMover(false);
                 mover.SetMover(false);
             }
         }

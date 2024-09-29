@@ -17,44 +17,29 @@ public class DialougeManager : MonoBehaviour
     public DialogueScriptable dialogueData;
     public bool isMover = false;
     public bool isStayer = false;
+    public bool isOne = true;
 
-    void Start()
+    public virtual void onSkip(InputAction.CallbackContext context)
     {
-        // Initialize dialogue lines (you can load this from a file or other source)
-        /*dialogueLines = new List<DialogueLine>(); // Create a list that will store all the dialogue lines
-
-        // Add dialogue lines with the speaker
-        dialogueLines.Add(new DialogueLine("Hello there I am tourist, what is this place?", "Thabo")); // Player speaks
-        dialogueLines.Add(new DialogueLine("A tourist, man as if there was not enough problems here already", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("Problems what problems since I am here might as well help", "Thabo")); // Player speaks
-        dialogueLines.Add(new DialogueLine("Well, why not this place is The Hotel it is where me and some others have called home", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("It is not much but for an adandonded area it pretty great in my opioin, but we do have a problem", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("The Hotel, I hope you do not mind me recording this", "Thabo")); // Player speaks
-        dialogueLines.Add(new DialogueLine("Not really but others might just try not to record people who do not want to be recorded", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("now the problem is recently we had all of the children in The Hotel have gone missing.", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("Wait what!?", "Thabo")); // Player speaks
-        dialogueLines.Add(new DialogueLine("That is horrible I know I said I can help but this seems like a major problem, why trust me", "Thabo")); // Player speaks
-        dialogueLines.Add(new DialogueLine("To be honest the rest of the people in The Hotel are distraught and you see, my people and I are", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("cowards. That is why we are here to escape from the normal life in the towns and cities but our kids deserve better", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("Fine, I will help but for the kids. Where do I start looking", "Thabo")); // Player speaks
-        dialogueLines.Add(new DialogueLine("You should find a letter it will help, the others say they are mutltiple.", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("They are connected to the kids find them and find the kids. And if you need some help finding", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("torches talk to one of the other people they can guide you to them if you ask", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("And thank you stranger may your courage guide you", "James")); // Player speaks*/
+        if (context.performed)
+        {
+            SkipWords();
+        }
     }
 
-     void Update()
-     {
-        if (isStayer == true)
-        {
-            ShowNextLine(); // Show the next line of dialogue
-            print("no");
-            Reset();
-        }
-     }
 
+    public virtual void Start()
+    {
+        Begin();
+    }
 
-    public void ShowNextLine()
+    public void Begin()
+    {
+        ShowNextLine();
+    }
+
+  
+    public virtual void ShowNextLine()
     {
         if (currentLineIndex < dialogueData.dialogueLines.Count) // Checks if there is any more dialogue to display
         {
@@ -68,19 +53,40 @@ public class DialougeManager : MonoBehaviour
 
     }
 
-    public void Reset()
+    public virtual void Reset()
     {
         currentLineIndex = 0;
     }
 
-    public void SetMover(bool state)
+    public virtual void SkipWords()
+    {
+        if (isStayer == true)
+        {
+            ShowNextLine();
+        }
+
+    }
+
+    public virtual void ChangeDialogueData(DialogueScriptable newDialogueData)
+    {
+        dialogueData = newDialogueData; // Update the current dialogue data
+        Reset(); // Reset the index to start from the first line of the new dialogue
+        ShowNextLine(); // Show the first line of the new dialogue
+    }
+
+    public virtual void SetMover(bool state)
     {
         isMover = state;
     }
 
-    public void SetStayer(bool state)
+    public virtual void SetStayer(bool state)
     {
         isStayer = state;
+    }
+
+    public virtual void SetOne(bool state)
+    {
+        isOne = state;
     }
 }
 
