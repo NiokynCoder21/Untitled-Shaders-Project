@@ -8,6 +8,8 @@ TagManager:
   - HandTorch
   - NoTorch
   - Torch
+  - Mover
+  - Stayer
   layers:
   - Default
   - TransparentFX

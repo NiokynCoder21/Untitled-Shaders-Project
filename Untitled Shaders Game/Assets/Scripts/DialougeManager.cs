@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class DialougeManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class DialougeManager : MonoBehaviour
     private int currentLineIndex = 0;
 
     public DialogueScriptable dialogueData;
+    public bool isMover = false;
+    public bool isStayer = false;
 
     void Start()
     {
@@ -38,20 +41,20 @@ public class DialougeManager : MonoBehaviour
         dialogueLines.Add(new DialogueLine("They are connected to the kids find them and find the kids. And if you need some help finding", "James")); // Player speaks
         dialogueLines.Add(new DialogueLine("torches talk to one of the other people they can guide you to them if you ask", "James")); // Player speaks
         dialogueLines.Add(new DialogueLine("And thank you stranger may your courage guide you", "James")); // Player speaks*/
-
-        ShowNextLine(); // Show the first line of dialogue
     }
 
-    void Update()
-    {
-        // Check for input to advance dialogue
-        if (Input.GetKeyDown(KeyCode.K)) // When player presses K
+     void Update()
+     {
+        if (isStayer == true)
         {
             ShowNextLine(); // Show the next line of dialogue
+            print("no");
+            Reset();
         }
-    }
+     }
 
-    void ShowNextLine()
+
+    public void ShowNextLine()
     {
         if (currentLineIndex < dialogueData.dialogueLines.Count) // Checks if there is any more dialogue to display
         {
@@ -65,6 +68,20 @@ public class DialougeManager : MonoBehaviour
 
     }
 
+    public void Reset()
+    {
+        currentLineIndex = 0;
+    }
+
+    public void SetMover(bool state)
+    {
+        isMover = state;
+    }
+
+    public void SetStayer(bool state)
+    {
+        isStayer = state;
+    }
 }
 
 
