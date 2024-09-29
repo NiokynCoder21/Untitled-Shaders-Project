@@ -8,17 +8,17 @@ public class DialougeManager : MonoBehaviour
 {
     public TMP_Text dialogueText; // Display the dialogue text
     public TMP_Text speakerNameText; // Reference to the player's name text GameObject
-    public GameObject textStuff;
 
-    private List<DialogueLine> dialogueLines;
-    private List<PlayerLine> playerLines;
+   // private List<DialogueLine> dialogueLines;
+   // private List<PlayerLine> playerLines;
     private int currentLineIndex = 0;
 
+    public DialogueScriptable dialogueData;
 
     void Start()
     {
         // Initialize dialogue lines (you can load this from a file or other source)
-        dialogueLines = new List<DialogueLine>(); // Create a list that will store all the dialogue lines
+        /*dialogueLines = new List<DialogueLine>(); // Create a list that will store all the dialogue lines
 
         // Add dialogue lines with the speaker
         dialogueLines.Add(new DialogueLine("Hello there I am tourist, what is this place?", "Thabo")); // Player speaks
@@ -37,11 +37,7 @@ public class DialougeManager : MonoBehaviour
         dialogueLines.Add(new DialogueLine("You should find a letter it will help, the others say they are mutltiple.", "James")); // Player speaks
         dialogueLines.Add(new DialogueLine("They are connected to the kids find them and find the kids. And if you need some help finding", "James")); // Player speaks
         dialogueLines.Add(new DialogueLine("torches talk to one of the other people they can guide you to them if you ask", "James")); // Player speaks
-        dialogueLines.Add(new DialogueLine("And thank you stranger may your courage guide you", "James")); // Player speaks
-
-        playerLines = new List<PlayerLine>();
-
-        playerLines.Add(new PlayerLine("Man it is dark down here", "Thabo"));
+        dialogueLines.Add(new DialogueLine("And thank you stranger may your courage guide you", "James")); // Player speaks*/
 
         ShowNextLine(); // Show the first line of dialogue
     }
@@ -57,9 +53,10 @@ public class DialougeManager : MonoBehaviour
 
     void ShowNextLine()
     {
-        if (currentLineIndex < dialogueLines.Count) // Checks if there is any more dialogue to display
+        if (currentLineIndex < dialogueData.dialogueLines.Count) // Checks if there is any more dialogue to display
         {
-            DialogueLine currentLine = dialogueLines[currentLineIndex]; // Get the current line
+            //DialogueLine  // Get the current line
+            DialogueScriptable.DialogueLine currentLine = dialogueData.dialogueLines[currentLineIndex];
 
             speakerNameText.text = currentLine.speakerName;
             dialogueText.text = currentLine.lineText; // Show the next line of dialogue
@@ -73,8 +70,8 @@ public class DialougeManager : MonoBehaviour
 
 
 // Structure to hold dialogue lines and speaker information
-[System.Serializable]
-public class DialogueLine
+//[System.Serializable]
+/*public class DialogueLine
 {
     public string lineText; // The dialogue text
     public string speakerName;
@@ -99,5 +96,5 @@ public class PlayerLine
         speakerName = name;
     }
 
-}
+}*/
 
