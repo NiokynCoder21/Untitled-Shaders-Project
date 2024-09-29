@@ -25,7 +25,7 @@ public class MoverDialougue :  DialougeManager
             //DialogueLine  // Get the current line
             DialogueScriptable.DialogueLine currentLine = dialogueData.dialogueLines[currentIndex];
 
-            speakerNameText.text = currentLine.speakerName;
+            speakerNameText.text = currentLine.speakerName; //converts speaker text to name of speaker
             dialogueText.text = currentLine.lineText; // Show the next line of dialogue
             currentIndex++; // Move to the next line
         }
@@ -35,7 +35,7 @@ public class MoverDialougue :  DialougeManager
     public override void ChangeDialogueData(DialogueScriptable newDialogueData)
     {
         dialogueData = newDialogueData; // Update the current dialogue data
-        currentIndex = 0;
+        currentIndex = 0; //resets the index
         ShowNextLine(); // Show the first line of the new dialogue
     }
 

@@ -2916,7 +2916,7 @@ GameObject:
   - component: {fileID: 529373827}
   - component: {fileID: 529373826}
   m_Layer: 0
-  m_Name: Player Check (1)
+  m_Name: Player NPC Checker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
