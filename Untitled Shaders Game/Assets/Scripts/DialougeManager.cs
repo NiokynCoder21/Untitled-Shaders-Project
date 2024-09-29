@@ -14,6 +14,7 @@ public class DialougeManager : MonoBehaviour
     private List<PlayerLine> playerLines;
     private int currentLineIndex = 0;
 
+
     void Start()
     {
         // Initialize dialogue lines (you can load this from a file or other source)
@@ -38,6 +39,9 @@ public class DialougeManager : MonoBehaviour
         dialogueLines.Add(new DialogueLine("torches talk to one of the other people they can guide you to them if you ask", "James")); // Player speaks
         dialogueLines.Add(new DialogueLine("And thank you stranger may your courage guide you", "James")); // Player speaks
 
+        playerLines = new List<PlayerLine>();
+
+        playerLines.Add(new PlayerLine("Man it is dark down here", "Thabo"));
 
         ShowNextLine(); // Show the first line of dialogue
     }
@@ -61,8 +65,12 @@ public class DialougeManager : MonoBehaviour
             dialogueText.text = currentLine.lineText; // Show the next line of dialogue
             currentLineIndex++; // Move to the next line
         }
+
     }
+
 }
+
+
 
 // Structure to hold dialogue lines and speaker information
 [System.Serializable]

@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPCCheck : MonoBehaviour
 {
     public GameObject dialougueStuff;
+    public DialougeManager manager;
 
     private void OnTriggerEnter(Collider other)
     {
