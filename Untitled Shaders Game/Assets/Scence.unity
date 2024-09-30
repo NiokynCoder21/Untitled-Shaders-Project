@@ -1838,7 +1838,7 @@ Transform:
   m_GameObject: {fileID: 324762822}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.43, y: -5.7213173, z: 14.12}
+  m_LocalPosition: {x: 1.43, y: -5.7213173, z: 13.642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2953,7 +2953,7 @@ MonoBehaviour:
   manager: {fileID: 1611443927}
   mover: {fileID: 1186153016}
   data: {fileID: 11400000, guid: 6ddece4c2ce99f540ad14e6ad7bcef4b, type: 2}
-  stayerData: {fileID: 0}
+  stayerData: {fileID: 11400000, guid: 289c24bbdf329a248ae422526bad978d, type: 2}
   newData: {fileID: 11400000, guid: 088b368cf41c52b4294398a982a77a91, type: 2}
   pisser: {fileID: 763263136}
   pisserData: {fileID: 11400000, guid: 0a96cf6caca7d0748bffdbd18a10f1ae, type: 2}
@@ -4462,7 +4462,7 @@ GameObject:
   - component: {fileID: 763263136}
   - component: {fileID: 763263137}
   m_Layer: 0
-  m_Name: Pisser NPC
+  m_Name: Pisser NPC(Man)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6805,7 +6805,7 @@ GameObject:
   - component: {fileID: 1186153022}
   - component: {fileID: 1186153023}
   m_Layer: 0
-  m_Name: Mover NPC
+  m_Name: Mover NPC(Kenneth)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9326,7 +9326,7 @@ GameObject:
   - component: {fileID: 1601495485}
   - component: {fileID: 1601495484}
   m_Layer: 0
-  m_Name: Stayer NPC 2
+  m_Name: Stayer NPC 2(Mpho)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9457,14 +9457,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601495483}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.14, y: 0.852, z: -4.72}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1.94, y: 0.852, z: 11.94}
   m_LocalScale: {x: 0.81815934, y: 0.8220023, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1763631114}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1611443921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9480,7 +9480,7 @@ GameObject:
   - component: {fileID: 1611443922}
   - component: {fileID: 1611443927}
   m_Layer: 0
-  m_Name: Stayer NPC
+  m_Name: Stayer NPC(James)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10756,8 +10756,8 @@ Transform:
   m_GameObject: {fileID: 1763631113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0754, y: 0.2596, z: -0.0608}
-  m_LocalScale: {x: 2.6988707, y: 2.216009, z: 2.7350943}
+  m_LocalPosition: {x: 0.0754, y: 0.2596, z: -0.3156}
+  m_LocalScale: {x: 2.6988707, y: 2.216009, z: 2.2255464}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1601495489}
