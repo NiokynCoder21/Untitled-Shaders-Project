@@ -7,15 +7,15 @@ using UnityEngine.AI;
 public class MoverDialougue :  DialougeManager
 {
     private int currentIndex = 0;
-    public List<Transform> patrolWaypoints;
-    private NavMeshAgent agent;
-    private int currentWaypointIndex = 0;
-    public GameObject checker;
-    public bool hasTalked = false;
-    public GameObject dialogueBox;
+    public List<Transform> patrolWaypoints; //the waypoints the nav mesh mover agent
+    private NavMeshAgent agent; //the mover enemy nav mesh
+    private int currentWaypointIndex = 0; 
+    public GameObject checker; //this is the mover enemys ui unhider collider
+    public bool hasTalked = false; //track whether done talking or not
+    public GameObject dialogueBox; //the dialogue ui the player sees
 
-    private int loopsCompleted = 0;
-    private int maxLoops = 1;
+    private int loopsCompleted = 0; //number of times enemy has looped through all the waypoints
+    private int maxLoops = 1; //how many loops i want them to have
 
     public enum EnemyState
     {
