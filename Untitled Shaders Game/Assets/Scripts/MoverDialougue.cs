@@ -12,13 +12,13 @@ public class MoverDialougue :  DialougeManager
     private int currentWaypointIndex = 0;
     public GameObject checker;
     public bool hasTalked = false;
+    public GameObject dialogueBox;
 
     public enum EnemyState
     {
         Talk,
         Move,
         Return,
-        Stand,
     }
 
     private EnemyState currentState;
@@ -48,10 +48,8 @@ public class MoverDialougue :  DialougeManager
                 MoveUpdate();
                 break;
             case EnemyState.Return:
-                ReturnUpdate();
                 break;
-            case EnemyState.Stand:
-                break;
+
         }
     }
 
@@ -60,24 +58,26 @@ public class MoverDialougue :  DialougeManager
     {
         if (hasTalked == true)
         {
-            if (patrolWaypoints.Count == 0) //checks if no waypoints are assigned
+            if (agent.remainingDistance < 0.5)
             {
-                Debug.LogError("No patrol waypoints assigned!"); //if yes then prints to consolse and returns
-                return;
+                SetNextWayPoint();
             }
-
-            agent.destination = patrolWaypoints[currentWaypointIndex].position; //makes the enemy move towards its current waypoint
-            currentState = EnemyState.Return;
+          
         }
     }
 
-    public void ReturnUpdate()
+    public void SetNextWayPoint()
     {
+        if (patrolWaypoints.Count == 0) //checks if no waypoints are assigned
+        {
+            Debug.LogError("No patrol waypoints assigned!"); //if yes then prints to consolse and returns
+            return;
+        }
+
+        agent.destination = patrolWaypoints[currentWaypointIndex].position; //makes the enemy move towards its current waypoint
         currentWaypointIndex = (currentWaypointIndex + 1) % patrolWaypoints.Count; //this ensure that after the last waypoint the enemy will loop back to the first waypoint assigned 
-        currentState = EnemyState.Stand;
     }
 
-   
     public override void ShowNextLine()
     {
         if (currentIndex < dialogueData.dialogueLines.Count) // Checks if there is any more dialogue to display
@@ -95,6 +95,7 @@ public class MoverDialougue :  DialougeManager
             checker.gameObject.SetActive(false);
             hasTalked = true;
             currentState = EnemyState.Move;
+            dialogueBox.gameObject.SetActive(false);
         }
 
     }
@@ -109,6 +110,7 @@ public class MoverDialougue :  DialougeManager
     public override void Start()
     {
         currentState = EnemyState.Talk;
+        agent = GetComponent<NavMeshAgent>();
     }
 
 }
