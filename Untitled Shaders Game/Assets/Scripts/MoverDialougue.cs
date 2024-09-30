@@ -14,6 +14,9 @@ public class MoverDialougue :  DialougeManager
     public bool hasTalked = false;
     public GameObject dialogueBox;
 
+    private int loopsCompleted = 0;
+    private int maxLoops = 1;
+
     public enum EnemyState
     {
         Talk,
@@ -75,6 +78,19 @@ public class MoverDialougue :  DialougeManager
         }
 
         agent.destination = patrolWaypoints[currentWaypointIndex].position; //makes the enemy move towards its current waypoint
+
+        if (currentWaypointIndex == patrolWaypoints.Count - 1)
+        {
+            loopsCompleted++;
+
+            // Check if the number of completed loops has reached the desired number
+            if (loopsCompleted >= maxLoops)
+            {
+                currentState = EnemyState.Return; // Change to Return state
+                return; // Exit the method to prevent setting the next waypoint
+            }
+        }
+
         currentWaypointIndex = (currentWaypointIndex + 1) % patrolWaypoints.Count; //this ensure that after the last waypoint the enemy will loop back to the first waypoint assigned 
     }
 
