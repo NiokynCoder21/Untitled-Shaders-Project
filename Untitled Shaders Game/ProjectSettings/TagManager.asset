@@ -11,6 +11,7 @@ TagManager:
   - Mover
   - Stayer
   - Pisser
+  - StayerTwo
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3c7bd4172c8f045ab467a8425b9947, type: 3}
+  m_Name: StayerTwo
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - lineText: Welcome to our humble little home, unfortunately you have come at a
+      dark time for our people.
+    speakerName: Mpho
+  - lineText: I was talked to James at the enterance he told me what happened and
+      I am happy to help where I can.
+    speakerName: Thabo
+  - lineText: Great then have you found any of the letters that have been left behind
+      by the culprit?
+    speakerName: Mpho
+  - lineText: Letter, oh yeah I found it how many are there?
+    speakerName: Thabo
+  - lineText: I am sure but please hurry you need to find those kids before it too
+      late!
+    speakerName: Mpho
+  - lineText: I know I will be off now
+    speakerName: Thabo

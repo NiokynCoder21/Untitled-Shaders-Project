@@ -17,7 +17,6 @@ public class DialougeManager : MonoBehaviour
     public DialogueScriptable dialogueData;
     public bool isMover = false;
     public bool isStayer = false;
-    public bool isOne = true;
 
     public virtual void onSkip(InputAction.CallbackContext context)
     {
@@ -82,11 +81,6 @@ public class DialougeManager : MonoBehaviour
     public virtual void SetStayer(bool state)
     {
         isStayer = state;
-    }
-
-    public virtual void SetOne(bool state)
-    {
-        isOne = state;
     }
 }
 

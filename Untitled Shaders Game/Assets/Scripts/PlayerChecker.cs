@@ -8,6 +8,7 @@ public class PlayerChecker : MonoBehaviour
     public DialougeManager manager;
     public MoverDialougue mover;
     public DialogueScriptable data;
+    public DialogueScriptable stayerData;
     public DialogueScriptable newData;
     public PisserDialogue pisser;
     public DialogueScriptable pisserData;
@@ -34,6 +35,17 @@ public class PlayerChecker : MonoBehaviour
             {
                 manager.SetStayer(true);
                 manager.ChangeDialogueData(data); //stayer data
+            }
+        }
+
+        else if (other.gameObject.CompareTag("StayerTwo"))
+        {
+            dialougueStuff.gameObject.SetActive(true);
+
+            if (manager != null)
+            {
+                manager.SetStayer(true);
+                manager.ChangeDialogueData(stayerData); //stayer data
             }
         }
 
@@ -72,6 +84,17 @@ public class PlayerChecker : MonoBehaviour
             }
         }
 
+        else if (other.gameObject.CompareTag("StayerTwo"))
+        {
+            dialougueStuff.gameObject.SetActive(true);
+
+            if (manager != null)
+            {
+                manager.SetStayer(true);
+            }
+        }
+
+
         else if (other.gameObject.CompareTag("Pisser"))
         {
             dialougueStuff.gameObject.SetActive(true);
@@ -105,6 +128,17 @@ public class PlayerChecker : MonoBehaviour
                 manager.SetStayer(false);
             }
         }
+
+        else if (other.gameObject.CompareTag("StayerTwo"))
+        {
+            dialougueStuff.gameObject.SetActive(false);
+
+            if (manager != null)
+            {
+                manager.SetStayer(false);
+            }
+        }
+
 
         else if (other.gameObject.CompareTag("Pisser"))
         {
