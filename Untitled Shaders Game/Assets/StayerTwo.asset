@@ -13,19 +13,18 @@ MonoBehaviour:
   m_Name: StayerTwo
   m_EditorClassIdentifier: 
   dialogueLines:
-  - lineText: Welcome to our humble little home, unfortunately you have come at a
-      dark time for our people.
+  - lineText: Welcome to Hotel New Living you must be our guest James told me he
+      let someone in.
     speakerName: Mpho
-  - lineText: I was talked to James at the enterance he told me what happened and
-      I am happy to help where I can.
+  - lineText: Yeah nice place you have here but what is with that Trevor dude?
     speakerName: Thabo
-  - lineText: Great then have you found any of the letters that have been left behind
-      by the culprit?
+  - lineText: Oh him he is one of the founders so we leave him be for the most part
+      but he not a bad guy.
     speakerName: Mpho
-  - lineText: Letter, oh yeah I found it how many are there?
+  - lineText: He is literally peeing in the room I am meant to be staying with him
+      in.
     speakerName: Thabo
-  - lineText: I am sure but please hurry you need to find those kids before it too
-      late!
+  - lineText: Then I guess you need to get used to smell of piss
     speakerName: Mpho
-  - lineText: I know I will be off now
+  - lineText: Wow thank you for this productive talk.
     speakerName: Thabo

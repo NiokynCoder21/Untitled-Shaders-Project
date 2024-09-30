@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: Stayer
   m_EditorClassIdentifier: 
   dialogueLines:
-  - lineText: Hi
+  - lineText: Hi there I am Thabo
     speakerName: Thabo
-  - lineText: What is your name
+  - lineText: Thabo, what are you doing so far from home?
+    speakerName: Man
+  - lineText: Well I am currently renting a home not far from here and was out exploring
+      until I got lost.
+    speakerName: Thabo
+  - lineText: Lost, well as long as you leave first thing in the morning you can
+      talk to Kenith at the desk to
+    speakerName: Man
+  - lineText: find you a place to stay. Oh thanks it was nice meeting you never got
+      your name though?
+    speakerName: Thabo
+  - lineText: Oh I am James now get going I have stay on guard.
     speakerName: James
-  - lineText: Thabo is my name
-    speakerName: Thabo
-  - lineText: boobies
-    speakerName: Thabo

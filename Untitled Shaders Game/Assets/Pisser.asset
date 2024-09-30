@@ -13,9 +13,17 @@ MonoBehaviour:
   m_Name: Pisser
   m_EditorClassIdentifier: 
   dialogueLines:
-  - lineText: Why are you peeing inside?
-    speakerName: Thabo
-  - lineText: I can pee wherever I want, let me pee in peace
+  - lineText: I am a rock o boy baby, yeah yeah, rocker boyy!
     speakerName: Man
-  - lineText: No problem I am out of here anyway.
+  - lineText: Uh, excuse me but I am gonna be your roomate for the night
     speakerName: Thabo
+  - lineText: Rocker rocker boyy!
+    speakerName: Man
+  - lineText: Uh dude can you stop peeing I am trying to talk to you
+    speakerName: Thabo
+  - lineText: I have a name new guy its Trevor and no I will not stop peeing
+    speakerName: Man
+  - lineText: Okay Trevor I am gonna head out then enjoy peeing I guess
+    speakerName: Thabo
+  - lineText: Rockerboy Babyy!
+    speakerName: Trevor

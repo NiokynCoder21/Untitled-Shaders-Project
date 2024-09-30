@@ -13,9 +13,17 @@ MonoBehaviour:
   m_Name: Mover
   m_EditorClassIdentifier: 
   dialogueLines:
-  - lineText: this is means
-    speakerName: T
-  - lineText: means what dude
-    speakerName: KElly
-  - lineText: It is not over
-    speakerName: T
+  - lineText: Hi James told me to come and talk to you.
+    speakerName: Thabo
+  - lineText: Oh really another one, I swear James thinks this place is still a hotel.
+      We only got one room free
+    speakerName: Kenith
+  - lineText: Oh so this place was hotel before I guess this must be the reception
+      area, yeah anything better than outside
+    speakerName: Thabo
+  - lineText: Yeah so the room you will be is with Trevor who can be a bit rowdy
+      so just a heads up.
+    speakerName: Kenith
+  - lineText: Also you should go talk to Mpho he is our leader but now you can follow
+      me to the room
+    speakerName: Kenith
