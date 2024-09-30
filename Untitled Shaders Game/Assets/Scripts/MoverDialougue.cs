@@ -7,6 +7,15 @@ public class MoverDialougue :  DialougeManager
 {
     private int currentIndex = 0;
 
+    public enum EnemyState
+    {
+        Talk,
+        Move,
+        Return,
+    }
+
+    private EnemyState currentState;
+
     public override void onSkip(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -16,6 +25,37 @@ public class MoverDialougue :  DialougeManager
                 ShowNextLine();
             }
         }
+    }
+
+    public void Update()
+    {
+        switch (currentState)
+        {
+            case EnemyState.Talk:
+                TalkUpdate();
+                break;
+            case EnemyState.Move:
+                MoveUpdate();
+                break;
+            case EnemyState.Return:
+                ReturnUpdate();
+                break;
+        }
+    }
+
+    public void TalkUpdate()
+    {
+
+    }
+
+    public void MoveUpdate()
+    {
+
+    }
+
+    public void ReturnUpdate()
+    {
+
     }
 
     public override void ShowNextLine()
