@@ -10,6 +10,7 @@ TagManager:
   - Torch
   - Mover
   - Stayer
+  - Pisser
   layers:
   - Default
   - TransparentFX
