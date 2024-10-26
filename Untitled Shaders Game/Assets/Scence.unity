@@ -1690,12 +1690,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289485621}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0474, y: 2.0863, z: -3.326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.978296, y: 14.677813, z: -22.481491}
   m_LocalScale: {x: 10.988267, y: 3.9526, z: 0.0749385}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 846091235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &290399988
 GameObject:
@@ -2188,12 +2188,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394225865}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 15.08, y: 2.0863, z: -4.0504}
-  m_LocalScale: {x: 13.416106, y: 3.9526, z: 0.0749385}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 8.149104, y: 14.677813, z: -23.20589}
+  m_LocalScale: {x: 13.416107, y: 3.9526, z: 0.0749385}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 846091235}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &427175136
 GameObject:
@@ -2676,6 +2676,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467323176}
   m_CullTransparentMesh: 1
+--- !u!1 &495599060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 495599062}
+  - component: {fileID: 495599061}
+  m_Layer: 0
+  m_Name: DialogueStuff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &495599061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495599060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532951dfd3b0eab4dadbcc42126dc8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speakerNameText: {fileID: 333247839}
+  dialogueText: {fileID: 910310405}
+--- !u!4 &495599062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495599060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.27632558, y: 1.0642188, z: -12.555178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &506865479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,7 +2960,7 @@ GameObject:
   - component: {fileID: 529373829}
   - component: {fileID: 529373828}
   - component: {fileID: 529373827}
-  - component: {fileID: 529373826}
+  - component: {fileID: 529373830}
   m_Layer: 0
   m_Name: Player NPC Checker
   m_TagString: Untagged
@@ -2937,26 +2983,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6770971449977687599}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &529373826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529373824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ee94cdeade53a41bf34f2753f6072d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialougueStuff: {fileID: 509304802}
-  manager: {fileID: 1611443927}
-  mover: {fileID: 1186153016}
-  data: {fileID: 11400000, guid: 6ddece4c2ce99f540ad14e6ad7bcef4b, type: 2}
-  stayerData: {fileID: 11400000, guid: 289c24bbdf329a248ae422526bad978d, type: 2}
-  newData: {fileID: 11400000, guid: 088b368cf41c52b4294398a982a77a91, type: 2}
-  pisser: {fileID: 763263136}
-  pisserData: {fileID: 11400000, guid: 0a96cf6caca7d0748bffdbd18a10f1ae, type: 2}
 --- !u!65 &529373827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3028,6 +3054,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529373824}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &529373830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529373824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2f2e535128d2641b4538378f3d221f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 509304802}
 --- !u!1 &536538648
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,6 +4500,7 @@ GameObject:
   - component: {fileID: 763263132}
   - component: {fileID: 763263136}
   - component: {fileID: 763263137}
+  - component: {fileID: 763263138}
   m_Layer: 0
   m_Name: Pisser NPC(Man)
   m_TagString: Untagged
@@ -4565,7 +4605,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763263131}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75cc60c92565ab44e88ad6c52e53ffe9, type: 3}
   m_Name: 
@@ -4679,6 +4719,34 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &763263138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763263131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc97219b2f7057947942adf4ccad709a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDialogueTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 763263138}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialoguedata: {fileID: 11400000, guid: 0a96cf6caca7d0748bffdbd18a10f1ae, type: 2}
 --- !u!1 &767403093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5479,6 +5547,10 @@ Transform:
   - {fileID: 7942816438968899924}
   - {fileID: 1066235067335297021}
   - {fileID: 6902850991263291353}
+  - {fileID: 289485625}
+  - {fileID: 1727677544}
+  - {fileID: 394225869}
+  - {fileID: 1718827747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &898737157
@@ -6804,6 +6876,7 @@ GameObject:
   - component: {fileID: 1186153016}
   - component: {fileID: 1186153022}
   - component: {fileID: 1186153023}
+  - component: {fileID: 1186153024}
   m_Layer: 0
   m_Name: Mover NPC(Kenneth)
   m_TagString: Untagged
@@ -6818,7 +6891,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186153015}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edfad814dce9bf341aaf4a27dc802a68, type: 3}
   m_Name: 
@@ -7049,6 +7122,34 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1186153024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186153015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc97219b2f7057947942adf4ccad709a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDialogueTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1186153024}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialoguedata: {fileID: 11400000, guid: 088b368cf41c52b4294398a982a77a91, type: 2}
 --- !u!1 &1189512276
 GameObject:
   m_ObjectHideFlags: 0
@@ -9325,6 +9426,7 @@ GameObject:
   - component: {fileID: 1601495486}
   - component: {fileID: 1601495485}
   - component: {fileID: 1601495484}
+  - component: {fileID: 1601495490}
   m_Layer: 0
   m_Name: Stayer NPC 2(Mpho)
   m_TagString: Untagged
@@ -9339,7 +9441,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601495483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d28e9a1a16abb2141b4ab35f5a0181c9, type: 3}
   m_Name: 
@@ -9465,6 +9567,34 @@ Transform:
   - {fileID: 1763631114}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1601495490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601495483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc97219b2f7057947942adf4ccad709a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDialogueTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1601495490}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialoguedata: {fileID: 11400000, guid: 289c24bbdf329a248ae422526bad978d, type: 2}
 --- !u!1 &1611443921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9479,6 +9609,7 @@ GameObject:
   - component: {fileID: 1611443923}
   - component: {fileID: 1611443922}
   - component: {fileID: 1611443927}
+  - component: {fileID: 1611443928}
   m_Layer: 0
   m_Name: Stayer NPC(James)
   m_TagString: Untagged
@@ -9609,7 +9740,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611443921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d28e9a1a16abb2141b4ab35f5a0181c9, type: 3}
   m_Name: 
@@ -9619,6 +9750,34 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: 6ddece4c2ce99f540ad14e6ad7bcef4b, type: 2}
   isMover: 0
   isStayer: 0
+--- !u!114 &1611443928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611443921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc97219b2f7057947942adf4ccad709a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDialogueTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1611443928}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialoguedata: {fileID: 11400000, guid: 6ddece4c2ce99f540ad14e6ad7bcef4b, type: 2}
 --- !u!1 &1612649414
 GameObject:
   m_ObjectHideFlags: 0
@@ -10616,12 +10775,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718827743}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 15.08, y: 2.0863, z: 9.0996}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 8.149104, y: 14.677813, z: -10.055891}
   m_LocalScale: {x: 8.597994, y: 3.9526, z: 0.0749385}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 846091235}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1727677540
 GameObject:
@@ -10721,12 +10880,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727677540}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2442, y: 2.0863, z: -3.326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.6866956, y: 14.677813, z: -22.481491}
   m_LocalScale: {x: 3.3799908, y: 3.9526, z: 0.0749385}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 846091235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763631113
 GameObject:
@@ -21573,9 +21732,9 @@ MonoBehaviour:
     m_ActionName: Player/LightTorch[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611443927}
-        m_TargetAssemblyTypeName: DialougeManager, Assembly-CSharp
-        m_MethodName: onSkip
+      - m_Target: {fileID: 529373830}
+        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
+        m_MethodName: Interact
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21855,13 +22014,10 @@ SceneRoots:
   - {fileID: 1195950382}
   - {fileID: 1524449657}
   - {fileID: 1565832634}
-  - {fileID: 289485625}
-  - {fileID: 1727677544}
-  - {fileID: 394225869}
-  - {fileID: 1718827747}
   - {fileID: 509984382}
   - {fileID: 1578116574}
   - {fileID: 1409772756}
   - {fileID: 555468610}
   - {fileID: 767403097}
   - {fileID: 1214248314}
+  - {fileID: 495599062}
