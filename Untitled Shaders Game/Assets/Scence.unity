@@ -5930,6 +5930,7 @@ GameObject:
   - component: {fileID: 763263134}
   - component: {fileID: 763263133}
   - component: {fileID: 763263132}
+  - component: {fileID: 763263136}
   m_Layer: 0
   m_Name: Pisser NPC(Man)
   m_TagString: Untagged
@@ -6029,7 +6030,28 @@ Transform:
   - {fileID: 1667735381}
   - {fileID: 118248168}
   m_Father: {fileID: 1405156931}
-  m_LocalEulerAnglesHint: {x: 0, y: -80.254, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.5004662, z: 0}
+--- !u!95 &763263136
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763263131}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &767403093
 GameObject:
   m_ObjectHideFlags: 0
@@ -8750,12 +8772,16 @@ PlayableDirector:
   m_GameObject: {fileID: 1026233967}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 0}
+  m_PlayableAsset: {fileID: 11400000, guid: 4d7141f9767861d46ada5b03d40ad893, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: -5731490037609474068, guid: 4d7141f9767861d46ada5b03d40ad893, type: 2}
+    value: {fileID: 1227507094}
+  - key: {fileID: -8796987377426970954, guid: 4d7141f9767861d46ada5b03d40ad893, type: 2}
+    value: {fileID: 763263136}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1026233969
@@ -10676,7 +10702,7 @@ GameObject:
   - component: {fileID: 1227507097}
   - component: {fileID: 1227507096}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Piss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
