@@ -2259,7 +2259,9 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: 2059975585278798510, guid: 842ac17f6d896e94e9a9651da9d1b984, type: 2}
+    value: {fileID: 8936259880684029712}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &399450661
@@ -18442,6 +18444,7 @@ GameObject:
   - component: {fileID: 6471193318624407348}
   - component: {fileID: 8936259880684029711}
   - component: {fileID: 4999704022862925951}
+  - component: {fileID: 8936259880684029712}
   m_Layer: 0
   m_Name: Player
   m_TagString: HandTorch
@@ -21652,6 +21655,27 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &8936259880684029712
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879723956611542409}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9014776605192542132
 GameObject:
   m_ObjectHideFlags: 0
