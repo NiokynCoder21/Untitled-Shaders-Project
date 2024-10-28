@@ -13,17 +13,32 @@ MonoBehaviour:
   m_Name: Mover
   m_EditorClassIdentifier: 
   dialogueLines:
-  - lineText: Hi James told me to come and talk to you.
+  - lineText: Dude your head is on fire are you okay!
     speakerName: Thabo
-  - lineText: Oh really another one, I swear James thinks this place is still a hotel.
-      We only got one room free
+  - lineText: Yes I am fine do not worry about this more importantly who are you?
     speakerName: Kenith
-  - lineText: Oh so this place was hotel before I guess this must be the reception
-      area, yeah anything better than outside
+  - lineText: Hi I am Thabo, I am lost, the man outside said I can stay the night
     speakerName: Thabo
-  - lineText: Yeah so the room you will be is with Trevor who can be a bit rowdy
-      so just a heads up.
+  - lineText: Oh another one I see, I swear we did this with Lebo. (I need talk to
+      Mpho about this)
+    speakerName: Man
+  - lineText: Lebo? Who is that is it the man I saw in the front.
+    speakerName: Thabo
+  - lineText: 'Oh do not worry about that just make sure you leave first thing in
+      the morning. '
+    speakerName: Man
+  - lineText: No problem, I want to get home as soon as possible I got plans for
+      tommorow.
+    speakerName: Thabo
+  - lineText: 'I am Kenith by the way I situate people here almost like a receptionist. '
     speakerName: Kenith
-  - lineText: Also you should go talk to Mpho he is our leader but now you can follow
-      me to the room
+  - lineText: We currently have people in all the rooms here but I will put you with
+      Trevor. He does not mind guests
+    speakerName: Kenith
+  - lineText: Thank you again I will be more careful when exploring from now on.
+    speakerName: Thabo
+  - lineText: Please do not disturb our other residents while you here, go to the
+      right and the room is at the bottom of the
+    speakerName: Kenith
+  - lineText: hallway. (Why does James keep letting people in like this)
     speakerName: Kenith

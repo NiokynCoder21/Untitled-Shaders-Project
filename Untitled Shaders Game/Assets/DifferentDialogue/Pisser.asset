@@ -13,17 +13,47 @@ MonoBehaviour:
   m_Name: Pisser
   m_EditorClassIdentifier: 
   dialogueLines:
-  - lineText: I am a rock o boy baby, yeah yeah, rocker boyy!
-    speakerName: Man
-  - lineText: Uh, excuse me but I am gonna be your roomate for the night
+  - lineText: Dude you just peed inside wtf!
     speakerName: Thabo
-  - lineText: Rocker rocker boyy!
+  - lineText: Well this is my room so unless you want to sleep outside get use to
+      the smell
     speakerName: Man
-  - lineText: Uh dude can you stop peeing I am trying to talk to you
+  - lineText: Well I am Thabo by the way what is your name. (It is just one night)
     speakerName: Thabo
-  - lineText: I have a name new guy its Trevor and no I will not stop peeing
-    speakerName: Man
-  - lineText: Okay Trevor I am gonna head out then enjoy peeing I guess
-    speakerName: Thabo
-  - lineText: Rockerboy Babyy!
+  - lineText: I am Trevor but I am sure you saw what happened out front with Lebo
+      right?
     speakerName: Trevor
+  - lineText: Wait, I did see that so that is Lebo what did he do?
+    speakerName: Thabo
+  - lineText: 'Well it is a long story but he got framed which is why he was kicked
+      out. '
+    speakerName: Trevor
+  - lineText: Why are you telling me this?
+    speakerName: Thabo
+  - lineText: Everyone thinks I am crazy because I belive Lebo was framed everyone
+      else does not
+    speakerName: Trevor
+  - lineText: except for James, he was just doing his job. I am sure he told you,
+      you look harmless.
+    speakerName: Trevor
+  - lineText: Yes he did
+    speakerName: Thabo
+  - lineText: I need to know that I can trust you, because we need your help to prove
+      Lebos
+    speakerName: Trevor
+  - lineText: innocence. An outsider is the best person to go around and ask questions
+    speakerName: Trevor
+  - lineText: will you help us?
+    speakerName: Trevor
+  - lineText: I barely know you why should I help, I just want to sleep and get out
+      of here.
+    speakerName: Thabo
+  - lineText: Our kids are gone.
+    speakerName: Trevor
+  - lineText: 'And they kicked out the only man who knew where they are, I want to
+      know '
+    speakerName: Trevor
+  - lineText: why?
+    speakerName: Trevor
+  - lineText: Fine, I ask around and try to find out what happened for the kids.
+    speakerName: Thabo
