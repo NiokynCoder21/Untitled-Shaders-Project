@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 77425874}
   m_Layer: 0
   m_Name: Fire Wood 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2546,7 +2546,7 @@ GameObject:
   - component: {fileID: 334524370}
   m_Layer: 0
   m_Name: Fire Wood 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3299,7 +3299,7 @@ GameObject:
   - component: {fileID: 434090594}
   m_Layer: 0
   m_Name: Fire Wood
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5061,7 +5061,7 @@ GameObject:
   - component: {fileID: 667298283}
   m_Layer: 0
   m_Name: Fire Wood
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5394,7 +5394,7 @@ GameObject:
   - component: {fileID: 706943683}
   m_Layer: 0
   m_Name: Fire Wood
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5501,7 +5501,7 @@ GameObject:
   - component: {fileID: 711002520}
   m_Layer: 0
   m_Name: Fire Wood 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10728,7 +10728,7 @@ GameObject:
   - component: {fileID: 1223364687}
   m_Layer: 0
   m_Name: Fire Wood
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11016,7 +11016,7 @@ GameObject:
   - component: {fileID: 1285687161}
   m_Layer: 0
   m_Name: Fire Wood
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12121,7 +12121,7 @@ GameObject:
   - component: {fileID: 1435895048}
   m_Layer: 0
   m_Name: Fire Wood 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15126,7 +15126,7 @@ GameObject:
   - component: {fileID: 1772739260}
   m_Layer: 0
   m_Name: Fire Wood 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15664,7 +15664,7 @@ GameObject:
   - component: {fileID: 1855819033}
   m_Layer: 0
   m_Name: Fire Wood 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16212,7 +16212,7 @@ GameObject:
   - component: {fileID: 1901019709}
   m_Layer: 0
   m_Name: Fire Wood 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17019,7 +17019,7 @@ GameObject:
   - component: {fileID: 1992142292}
   m_Layer: 0
   m_Name: Fire Wood
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17502,7 +17502,7 @@ GameObject:
   - component: {fileID: 2067945372}
   m_Layer: 0
   m_Name: Fire Wood 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17744,7 +17744,7 @@ GameObject:
   - component: {fileID: 2084689748}
   m_Layer: 0
   m_Name: Fire Wood
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18188,7 +18188,7 @@ GameObject:
   - component: {fileID: 2132846331}
   m_Layer: 0
   m_Name: Fire Wood
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
