@@ -5,10 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    private DialogueTrigger npcNear;
-    public GameObject dialogueUI;
-    public bool newSpeaker = false;
-    public DialogueScriptable dialogueData;
+    private DialogueTrigger npcNear; //holds reference which will help ensure that only 1 npc is near
+    public GameObject dialogueUI; //the digualue ui
+    public bool newSpeaker = false; //if is talking to npc
 
     public void Interact(InputAction.CallbackContext context)
     {
@@ -16,7 +15,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (npcNear != null)
             {
-                DialogueStuff.Instance.ShowNextLine(npcNear.GetDialogueData());
+                DialogueStuff.Instance.ShowNextLine(npcNear.GetDialogueData()); //this calls shownext line of current npc skiping through dialigue
                 OnEnable();
                 OnDisable();
             }
@@ -47,15 +46,14 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the player enters the proximity of an NPC tagged appropriately
-        var npc = other.GetComponent<DialogueTrigger>();
+        
+        var npc = other.GetComponent<DialogueTrigger>(); // Check if the player enters the proximity of an NPC tagged appropriately
 
         if (npc != null)
         {
             dialogueUI.gameObject.SetActive(true);
             npcNear = npc;
             newSpeaker = true;
-            print("collion");
 
             if (newSpeaker == true)
             {
@@ -68,9 +66,8 @@ public class PlayerInteraction : MonoBehaviour
 
 
     private void OnTriggerExit(Collider other)
-    {
-        // Clear the NPC reference if the player exits the NPC’s proximity
-        if (npcNear != null && other.GetComponent<DialogueTrigger>() == npcNear)
+    {      
+        if (npcNear != null && other.GetComponent<DialogueTrigger>() == npcNear) // Clear the NPC reference if the player exits the NPC’s proximity
         {
             dialogueUI.gameObject.SetActive(false);
             newSpeaker = false;

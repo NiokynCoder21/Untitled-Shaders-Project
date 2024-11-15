@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5188366999353544245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2521662993598178669}
+  - component: {fileID: 3325393355162184244}
+  - component: {fileID: 2247951240191560888}
+  m_Layer: 0
+  m_Name: TorchManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2521662993598178669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5188366999353544245}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4295153, y: 7.7302184, z: -4.015018}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3325393355162184244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5188366999353544245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1f93f1cc29254449d8189f40d0e779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneTorchText: {fileID: 0}
+  noTorchText: {fileID: 0}
+--- !u!114 &2247951240191560888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5188366999353544245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2416dd15398bae4780a9f116e1f131e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPositions:
+  - {x: 1.087, y: 0.438, z: 2.101}
+  - {x: 1.817, y: 0.932, z: 1.322}
+  - {x: 12.046, y: 0.597, z: 0.939}
+  - {x: 25.136, y: 0.449, z: -0.455}
+  - {x: 6, y: 0.449, z: 8.46}
+  - {x: 9.35, y: 0.449, z: 21.29}
+  - {x: 4.96, y: 0.449, z: 13.97}
+  - {x: 5.14, y: 0.449, z: 28.37}
+  - {x: -5.95, y: 0.449, z: 15.25}

@@ -23,7 +23,6 @@ public class DialogueStuff : MonoBehaviour
             Destroy(gameObject);
         }
 
-        // Optional: If you want this instance to persist across scenes
         DontDestroyOnLoad(gameObject);
     }
 
@@ -44,17 +43,15 @@ public class DialogueStuff : MonoBehaviour
     {
         dialogueData = data;
 
-        // Check if there are more lines to display
-        if (thisIndex < dialogueData.dialogueLines.Count)
+        
+        if (thisIndex < dialogueData.dialogueLines.Count) // Check if there are more lines to display
         {
             DialogueScriptable.DialogueLine currentLine = dialogueData.dialogueLines[thisIndex];
-
-            // Update UI with the speaker name and dialogue line
-            speakerNameText.text = currentLine.speakerName;
+           
+            speakerNameText.text = currentLine.speakerName; // Update UI with the speaker name and dialogue line
             dialogueText.text = currentLine.lineText;
-
-            // Move to the next line for future calls
-            thisIndex++;
+           
+            thisIndex++; // Move to the next line for future calls
         }
 
     }

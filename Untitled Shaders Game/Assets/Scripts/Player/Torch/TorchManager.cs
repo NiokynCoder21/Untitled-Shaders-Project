@@ -28,8 +28,13 @@ public class TorchManager : MonoBehaviour
     {
         if(hasTorch == true) //if the player is holding a torch
         {
-            oneTorchText.gameObject.SetActive(true); //show they have 1 torch
-            noTorchText.gameObject.SetActive(false); //show they have 0 torch
+            if (oneTorchText && noTorchText != null)
+            {
+                oneTorchText.gameObject.SetActive(true); //show they have 1 torch
+                noTorchText.gameObject.SetActive(false); //show they have 0 torch
+            }
+
+            
         }
 
         else

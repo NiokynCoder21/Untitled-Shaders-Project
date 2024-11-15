@@ -29,9 +29,8 @@ public class PlayerController : MonoBehaviour
     public bool torch = false; //checks whether the flame is on or off;
     public float fireTime = 10f; //how long the fire is lit for
     public TMP_Text scanText; //this is text that tells the player what to press to scan the enviroment
-    public AudioClip scanSound;
-    public AudioClip onFireSound;
-    public AudioClip contiousSound;
+    public AudioClip onFireSound; //fire on sound
+    public AudioClip contiousSound; //contious sound
 
     public void OnMove(InputAction.CallbackContext context)  
     {
@@ -122,9 +121,6 @@ public class PlayerController : MonoBehaviour
             main.startLifetime = duration; //this sets the lifetime to the duration
             main.startSize = size; //this sets the start size of the particles
             scanText.gameObject.SetActive(false); //this removes text once the player presses the button
-            AudioSource audio = GetComponent<AudioSource>(); //get component audiosource and store as audio
-            audio.clip = scanSound; //make the audio clip be reloadSound
-            audio.Play();
         }
 
         else

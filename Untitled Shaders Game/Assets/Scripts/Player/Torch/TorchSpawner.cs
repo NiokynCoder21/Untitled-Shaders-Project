@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TorchSpawner : MonoBehaviour
 {
-    public List<Vector3> spawnPositions; //this is a list to keep all the spawn locations 
+    public List<Transform> spawnPositions; //this is a list to keep all the spawn locations 
     private bool hasSpawned = false; //has the objects spawned 
 
     private void FixedUpdate()
@@ -17,9 +17,9 @@ public class TorchSpawner : MonoBehaviour
 
     void SpawnAllObjects()
     {
-        foreach (Vector3 position in spawnPositions) //this loops through the vector 3 position of all the spawn positions
+        foreach (Transform location in spawnPositions) //this loops through the vector 3 position of all the spawn positions
         {
-            ObjectPooler.Instance.SpawnFromPool("HandTorch", position, Quaternion.identity);
+            ObjectPooler.Instance.SpawnFromPool("HandTorch", location.position, Quaternion.identity);
             hasSpawned = true;
         }
     }
