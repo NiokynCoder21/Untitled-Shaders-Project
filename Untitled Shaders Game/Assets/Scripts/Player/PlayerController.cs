@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     public bool torch = false; //checks whether the flame is on or off;
     public float fireTime = 10f; //how long the fire is lit for
     public TMP_Text scanText; //this is text that tells the player what to press to scan the enviroment
+    public AudioClip scanSound;
+    public AudioClip onFireSound;
+    public AudioClip contiousSound;
 
     public void OnMove(InputAction.CallbackContext context)  
     {
@@ -53,7 +56,11 @@ public class PlayerController : MonoBehaviour
 
     public void onScan(InputAction.CallbackContext context)
     {
-        ScanTerrain(); //this calls the function when the button is pressed
+
+        if (context.performed)
+        {
+            ScanTerrain(); //this calls the function when the button is pressed
+        }
     }
 
     public void onLight(InputAction.CallbackContext context)
@@ -115,6 +122,9 @@ public class PlayerController : MonoBehaviour
             main.startLifetime = duration; //this sets the lifetime to the duration
             main.startSize = size; //this sets the start size of the particles
             scanText.gameObject.SetActive(false); //this removes text once the player presses the button
+            AudioSource audio = GetComponent<AudioSource>(); //get component audiosource and store as audio
+            audio.clip = scanSound; //make the audio clip be reloadSound
+            audio.Play();
         }
 
         else
@@ -131,6 +141,9 @@ public class PlayerController : MonoBehaviour
     {
         if(torch == true) //if the flame is on
         {
+            AudioSource audio = GetComponent<AudioSource>(); //get component audiosource and store as audio
+            audio.clip = onFireSound; //make the audio clip be reloadSound
+            audio.Play();
             StartCoroutine(LightTorchWithTimer(duration)); //this will start the timer
         }
     }
@@ -139,11 +152,18 @@ public class PlayerController : MonoBehaviour
     {
         fire.gameObject.SetActive(true); //this turns on the fire game object
 
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = contiousSound; // set the looping sound for the fire
+        audio.loop = true; // enable looping for the fire sound
+        audio.Play();
+
         yield return new WaitForSeconds(duration); //wait for this amount of time
 
         fire.gameObject.SetActive(false); //this turns off the fire game object
         torchStick.gameObject.SetActive(false); //this turns off the torch game object
         TorchManager.Instance.SetHasTorch(false); //this tells the torch manager that the player does not have a torch anymore
+        audio.loop = false; // disable looping
+        audio.Stop();
     }
 
     private void LateUpdate()
